@@ -45,7 +45,6 @@ public class b1206_dfs_bfs {
             if(arr[start][i] == 1 && !check[i])
                 dfs(i);
         }
-
     }
 
     public static void bfs(int start) {

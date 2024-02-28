@@ -14,23 +14,24 @@ public class b15649_NM1 {
         M = Integer.parseInt(st.nextToken());
         visited = new boolean[N];
         arr = new int[M];
-        start(N,M,0);
+        dfs(0);
+        System.out.println(sb);
     }
-    private static void start(int N, int M, int depth){
-        if(depth == M){
-            for(int a : arr){
-                sb.append(a).append(' ');
-            }
-            sb.append('\n');
+
+
+    private static void dfs(int current){
+        if(current == M){
+            sb.append("\n");
             return;
         }
         for(int i=0; i<N; i++){
             if(!visited[i]){
                 visited[i] = true;
-                arr[depth] = i+1;
-                start(N,M,depth+1);
+                sb.append(i+1).append(" ");
+                dfs(current + 1);
                 visited[i] = false;
             }
         }
     }
+
 }
