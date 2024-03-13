@@ -23,7 +23,7 @@ public class b6064_카잉달력 {
     private static int solve(int M, int N, int x, int y){
         int max = lcm(M,N);
         while (x<=max){
-            if((x)%N == y){
+            if((x-y)%N == 0){
                 return x;
             }
             x+=M;
