@@ -5,20 +5,20 @@ import java.io.*;
 public class b14889_스타트와링크 {
     static int min = Integer.MAX_VALUE;
     public static void main(String[] args) throws Exception{
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
-        int[][] map = new int[N][N];
-        StringTokenizer st;
-        for(int i=0; i<N; i++){
-            st = new StringTokenizer(br.readLine());
-            for(int j=0; j<N; j++){
-                int p = Integer.parseInt(st.nextToken());
-                map[i][j] = p;
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            int N = Integer.parseInt(br.readLine());
+            int[][] map = new int[N][N];
+            StringTokenizer st;
+            for(int i=0; i<N; i++){
+                st = new StringTokenizer(br.readLine());
+                for(int j=0; j<N; j++){
+                    int p = Integer.parseInt(st.nextToken());
+                    map[i][j] = p;
+                }
             }
-        }
-        boolean[] visited = new boolean[N];
-        solve(N,map,visited,0,0);
-        System.out.println(min);
+            boolean[] visited = new boolean[N];
+            solve(N,map,visited,0,0);
+            System.out.println(min);
     }
     private static void solve(int N, int[][] map, boolean[] visited, int current, int depth){
         if(depth == N/2){
