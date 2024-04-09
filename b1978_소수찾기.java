@@ -19,7 +19,7 @@ public class b1978_소수찾기 {
         if(number == 1) return false;
         for(int i=2; i<= (int) Math.sqrt(number);i++){
             if(number%i==0){
-                return false;
+                return false;//소수가 아님
             }
         }
         return true;
