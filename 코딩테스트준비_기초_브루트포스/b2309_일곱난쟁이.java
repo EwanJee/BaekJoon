@@ -22,25 +22,6 @@ public class b2309_일곱난쟁이 {
             arr[i] = Integer.parseInt(br.readLine());
             sum += arr[i];
         }
-//        sum-=100;
-//        for(int i=0; i<arr.length; i++) {
-//            int first = arr[i];
-//            for (int j = i + 1; j < arr.length; j++) {
-//                int second = arr[j];
-//                int fake = first + second;
-//                if (fake == sum) {
-//                    arr[i] = 0;
-//                    arr[j] = 0;
-//                    sum = 0;
-//                    break;
-//                }
-//            }
-//        }
-//        Arrays.sort(arr);
-//        for(int each : arr){
-//            if(each == 0) continue;
-//            System.out.println(each);
-//        }
         boolean[] visited = new boolean[9];
         int[] reals = new int[7];
         dfs(arr,0, 0, visited, reals);
