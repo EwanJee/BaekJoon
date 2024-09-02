@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class 성격유형검사하기 {
-    static Map<String, Integer> map = new HashMap<>();
+    static Map<Character, Integer> map = new HashMap<>();
 
     public String solution(String[] array, int[] choices) {
         for (int i = 0; i < array.length; i++) {
             String element = array[i];
-            String e1 = String.valueOf(element.charAt(0));
-            String e2 = String.valueOf(element.charAt(1));
+            char e1 = element.charAt(0);
+            char e2 = element.charAt(1);
             int score = choices[i];
             if (score == 4) continue;
             if (score > 4) {
