@@ -13,11 +13,11 @@ public class b2609_최대공약수와최소공배수 {
         System.out.println(gcd);
         System.out.println(gcs);
     }
-
-    private static int gcd(int max, int min) {
-        if(min==0){
-            return max;
+    // 최대공약수 구하기 함수
+    private static int gcd(int a, int b) {
+        if(b==0){
+            return a;
         }
-        return gcd(min, max%min);
+        return gcd(b, a%b);
     }
 }
