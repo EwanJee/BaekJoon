@@ -9,8 +9,7 @@ public class p_짝지어제거하기 {
             for (char c : s.toCharArray()) {
                 if (!stack.isEmpty() && stack.peek() == c) {
                     stack.pop();
-                }
-                else {
+                } else {
                     stack.push(c);
                 }
             }
