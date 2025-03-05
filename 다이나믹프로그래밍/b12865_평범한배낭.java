@@ -26,6 +26,10 @@ public class b12865_평범한배낭 {
             for (int j=K; j>=weight; j--) {
                 dp[j] = Math.max(dp[j], dp[j-weight] + value);
             }
+            for (int j=0; j<=K; j++) {
+                System.out.print(dp[j] + " ");
+            }
+            System.out.println();
         }
         System.out.println(dp[K]);
     }
